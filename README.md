@@ -21,13 +21,24 @@ Jesús Alcalá-Fdez
 ![](images/fig1.png)
 *Figure 1. Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.*
 
+The manuscript is open access, and both the main article and supplementary material can be freely accessed through the following links:
+
+- **Main Article**:
+  - **Journal Website**: [https://www.sciencedirect.com/science/article/pii/S0933365724002045](https://www.sciencedirect.com/science/article/pii/S0933365724002045)
+  - **University of Granada Institutional Repository (DIGIBUG)**: [https://digibug.ugr.es/handle/10481/93775](https://digibug.ugr.es/handle/10481/93775)
+
+- **Supplementary Material**:
+  - **UGR MultiOmics IR Prediction Website**: [https://sci2s.ugr.es/MultiOmics_IR_Pred](https://sci2s.ugr.es/MultiOmics_IR_Pred)
+
+This open-source repository is shared with the goal of promoting transparency and reproducibility in research, allowing researchers to reproduce the results and adapt the provided pipeline for their own datasets.
+
 ## Abstract 
 
 > Pediatric obesity can drastically heighten the risk of cardiometabolic alterations later in life, with insulin resistance standing as the cornerstone linking adiposity to the increased cardiovascular risk. Puberty has been pointed out as a critical stage after which obesity-associated insulin resistance is more difficult to revert. Timely prediction of insulin resistance in pediatric obesity is therefore vital for mitigating the risk of its associated comorbidities. The construction of effective and robust predictive systems for a complex health outcome like insulin resistance during the early stages of life demands the adoption of longitudinal designs for more causal inferences, and the integration of factors of varying nature involved in its onset. In this work, we propose an eXplainable Artificial Intelligence-based decision support pipeline for early diagnosis of insulin resistance in a longitudinal cohort of 90 children. For that, we leverage multi-omics (genomics and epigenomics) and clinical data from the pre-pubertal stage. Different data layers combinations, pre-processing techniques (missing values, feature selection, class imbalance, etc.), algorithms, training procedures were considered following good practices for Machine Learning. SHapley Additive exPlanations were provided for specialists to understand both the decision-making mechanisms of the system and the impact of the features on each automatic decision, an essential issue in high-risk areas such as this one where system decisions may affect people's lives. The system showed a relevant predictive ability (AUC and G-mean of 0.92). A deep exploration, both at the global and the local level, revealed promising biomarkers of insulin resistance in our population, highlighting classical markers, such as Body Mass Index z-score or leptin/adiponectin ratio, and novel ones such as methylation patterns of relevant genes, such as *HDAC4*, *PTPRN2*, *MATN2*, *RASGRF1* and *EBF1*. Our findings highlight the importance of integrating multi-omics data and following eXplainable Artificial Intelligence trends when building decision support systems. 
 
 ## Results 
 
-![](images/fig2.png)
+<img src="./images/fig2.png" width="500"/>
 *Figure 2. G-mean is shown in the 𝑦-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers. According to the predictive metrics, Epi+Clin data fusion is the most accurate data combination in 3 of the 5 algorithms.*
 
 ![](images/fig3.png)
@@ -61,24 +72,9 @@ A `R/Python` environment is required to execute the code. The required libraries
 
 ## License
 
-All source code is made available under a BSD 3-clause license. You can freely use and modify the code, without warranty, so long as you provide attribution to the authors. See `LICENSE.md` for the full license text.
-
-The manuscript text is open source. 
-
-## License
-
 All source code is made available under a BSD 3-clause license. You can freely use, modify, and distribute the code, provided proper attribution is given to the authors. See `LICENSE.md` for the full license text. 
 
-The manuscript is open access, and both the main article and supplementary material can be freely accessed through the following links:
 
-- **Main Article**:
-  - **Journal Website**: [https://www.sciencedirect.com/science/article/pii/S0933365724002045](https://www.sciencedirect.com/science/article/pii/S0933365724002045)
-  - **University of Granada Institutional Repository (DIGIBUG)**: [https://digibug.ugr.es/handle/10481/93775](https://digibug.ugr.es/handle/10481/93775)
-
-- **Supplementary Material**:
-  - **UGR MultiOmics IR Prediction Website**: [https://sci2s.ugr.es/MultiOmics_IR_Pred](https://sci2s.ugr.es/MultiOmics_IR_Pred)
-
-This open-source repository is shared with the goal of promoting transparency and reproducibility in research, allowing researchers to reproduce the results and adapt the provided pipeline for their own datasets.
 
 ## Citation
 
