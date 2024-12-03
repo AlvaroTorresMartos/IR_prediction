@@ -18,8 +18,10 @@ Jesús Alcalá-Fdez
 
 > In the current paper, we propose a Machine Learning pipeline integrating multiomics data and eXplainable Artificial Intelligence (XAI) to predict insulin resistance during puberty using only pre-pubertal information. The methodology, including the combination of data layers, algorithms, and resampling techniques, is summarized in the following figure:
 
-![](images/fig1.png)
-*Figure 1. Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.*
+<div align="center">
+  <img src="./images/fig1.png" alt="Figure 1: Overview"/>
+  <p><strong>Figure 1.</strong> Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.</p>
+</div>
 
 The manuscript is open access, and both the main article and supplementary material can be freely accessed through the following links:
 
@@ -38,15 +40,20 @@ This open-source repository is shared with the goal of promoting transparency an
 
 ## Results 
 
-<img src="./images/fig2.png" width="500"/>
-*Figure 2. G-mean is shown in the 𝑦-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers. According to the predictive metrics, Epi+Clin data fusion is the most accurate data combination in 3 of the 5 algorithms.*
+<div align="center">
+  <img src="./images/fig2.png" width="500" alt="Figure 2: Experimental Results"/>
+  <p><strong>Figure 2.</strong> G-mean is shown on the y-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers.</p>
+</div>
 
-![](images/fig3.png)
-*Figure 3. The SHAP analysis was conducted for our final system to provide global explanations. The top 20 features, ranked by their contributions. Each point represents the contribution of a specific child and feature to the system. The color of the point indicates the value of the feature, with pink representing high values and blue representing low values.*
+<div align="center">
+  <img src="./images/fig3.png" width="500" alt="Figure 3: Ranking of the features"/>
+  <p><strong>Figure 3.</strong> The SHAP analysis was conducted for our final system to provide global explanations. The top 20 features, ranked by their contributions. Each point represents the contribution of a specific child and feature to the system. The color of the point indicates the value of the feature, with pink representing high values and blue representing low values.</p>
+</div>
 
-![](images/fig4.png)
-*Figure 4. The heatmap displays clusters of children (rows) and variables (columns) based on their SHAP values. Clustering was only performed on the children used to generate the final classifier (RF) and the fifteen variables that contributed the most to the system based on their SHAP values. The legend shows that red and green represent children who were in IR and non-IR in pre-pubertal and pubertal states, respectively. Blue and red represent the non-IR and IR predictions of RF, respectively. The identification number of each child is displayed on the right-hand side. The visualization displays four clusters of children and variables. The initial cluster of variables comprises solely HDAC4 methylation, while the following two clusters consist of methylation of the main genes and the last cluster of variables comprises clinical variables such as BMI z-score and leptin/adiponectin ratio together with other methylation patterns. The first, second, third, and fourth clusters of children are composed of the following individuals with IDs from child 3 to child 16, from child 34 to child 37, from child 23 to child 38 and from child 27 to child 50, respectively It is worth noting that the first and second clusters of children can be distinguished by their HDAC4 methylation pattern, while the last two clusters are characterized by their heterogeneity.*
-
+<div align="center">
+  <img src="./images/fig4.png" width="500" alt="Figure 4: Clustering"/>
+  <p><strong>Figure 4.</strong> The heatmap displays clusters of children (rows) and variables (columns) based on their SHAP values. Clustering was only performed on the children used to generate the final classifier (RF) and the fifteen variables that contributed the most to the system based on their SHAP values. The legend shows that red and green represent children who were in IR and non-IR in pre-pubertal and pubertal states, respectively. Blue and red represent the non-IR and IR predictions of RF, respectively. The identification number of each child is displayed on the right-hand side. The visualization displays four clusters of children and variables. The initial cluster of variables comprises solely HDAC4 methylation, while the following two clusters consist of methylation of the main genes and the last cluster of variables comprises clinical variables such as BMI z-score and leptin/adiponectin ratio together with other methylation patterns. The first, second, third, and fourth clusters of children are composed of the following individuals with IDs from child 3 to child 16, from child 34 to child 37, from child 23 to child 38 and from child 27 to child 50, respectively It is worth noting that the first and second clusters of children can be distinguished by their HDAC4 methylation pattern, while the last two clusters are characterized by their heterogeneity.</p>
+</div>
 
 ## Scripts
 
