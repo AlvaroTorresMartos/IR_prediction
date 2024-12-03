@@ -1,8 +1,22 @@
 
+# Multiomics and eXplainable artificial intelligence for decision support in insulin resistance early diagnosis: A pediatric population-based longitudinal study
 
-This is an online repository gathering all codes employed for the analyses presented in the paper (Torres-Martos Á et al. (2024)). The purpose of this repository is to allow researchers to reproduce the Machine Learning pipeline presented in the paper, as well as to adapt provided codes for the analyses of their own datasets.
+## Authors
+by 
+Álvaro Torres-Martos,
+Augusto Anguita-Ruiz,
+Mireia Bustos Aibar, 
+Alberto Ramírez Mena, 
+María Arteaga, 
+Gloria Bueno, 
+Rosaura Leis, 
+Concepción M. Aguilera, 
+Rafael Alcalá, 
+Jesús Alcalá-Fdez
 
-This paper has been submitted for publication in *Artificial Intelligence in Medicine*.
+> This is an online repository gathering all codes employed for the analyses presented in the paper (Torres-Martos Á *et al*. Multiomics and eXplainable Artificial Intelligence for decision support in insulin resistance early diagnosis: A pediatric population-based longitudinal study". *Artificial Intelligence in Medicine*. 2024.;156:102962. doi:10.1016/j.artmed.2024.102962). The purpose of this repository is to allow researchers to reproduce the Machine Learning pipeline presented in the paper, as well as to adapt provided codes for the analyses of their own datasets.
+
+> In the current paper, we propose a Machine Learning pipeline integrating multiomics data and eXplainable Artificial Intelligence (XAI) to predict insulin resistance during puberty using only pre-pubertal information. The methodology, including the combination of data layers, algorithms, and resampling techniques, is summarized in the following figure:
 
 
 
