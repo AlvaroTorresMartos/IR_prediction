@@ -18,7 +18,7 @@ Jesús Alcalá-Fdez
 
 > In the current paper, we propose a Machine Learning pipeline integrating multiomics data and eXplainable Artificial Intelligence (XAI) to predict insulin resistance during puberty using only pre-pubertal information. The methodology, including the combination of data layers, algorithms, and resampling techniques, is summarized in the following figure:
 
-![](https://ars.els-cdn.com/content/image/1-s2.0-S0933365724002045-gr1.jpg)
+![](https://github.com/AlvaroTorresMartos/IR_prediction/images/fig1.svg)
 
 *Figure. Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.*
 
