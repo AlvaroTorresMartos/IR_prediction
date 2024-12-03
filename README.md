@@ -41,17 +41,22 @@ This open-source repository is shared with the goal of promoting transparency an
 ## Results 
 
 <div align="center">
-  <img src="./images/fig2.png" width="500" alt="Figure 2: Experimental Results"/>
-  <p><strong>Figure 2.</strong> G-mean is shown on the y-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers.</p>
+  <table>
+    <tr>
+      <td>
+        <img src="./images/fig2.png" width="400" alt="Figure 2: Experimental Results"/>
+      </td>
+      <td>
+        <img src="./images/fig3.png" width="400" alt="Figure 3: Ranking of the features"/>
+      </td>
+    </tr>
+  </table>
+  <p><strong>Figure 2 and 3.</strong> (Left) G-mean is shown on the y-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers. (Right) The SHAP analysis was conducted for our final system (RF) to provide global explanations. The top 20 features are ranked by their contributions. Each point represents the contribution of a specific child and feature to the system, with colors indicating feature values.</p>
 </div>
 
-<div align="center">
-  <img src="./images/fig3.png" width="500" alt="Figure 3: Ranking of the features"/>
-  <p><strong>Figure 3.</strong> The SHAP analysis was conducted for our final system to provide global explanations. The top 20 features, ranked by their contributions. Each point represents the contribution of a specific child and feature to the system. The color of the point indicates the value of the feature, with pink representing high values and blue representing low values.</p>
-</div>
 
 <div align="center">
-  <img src="./images/fig4.png" width="500" alt="Figure 4: Clustering"/>
+  <img src="./images/fig4.png" alt="Figure 4: Clustering"/>
   <p><strong>Figure 4.</strong> The heatmap displays clusters of children (rows) and variables (columns) based on their SHAP values. Clustering was only performed on the children used to generate the final classifier (RF) and the fifteen variables that contributed the most to the system based on their SHAP values. The legend shows that red and green represent children who were in IR and non-IR in pre-pubertal and pubertal states, respectively. Blue and red represent the non-IR and IR predictions of RF, respectively. The identification number of each child is displayed on the right-hand side. The visualization displays four clusters of children and variables. The initial cluster of variables comprises solely HDAC4 methylation, while the following two clusters consist of methylation of the main genes and the last cluster of variables comprises clinical variables such as BMI z-score and leptin/adiponectin ratio together with other methylation patterns. The first, second, third, and fourth clusters of children are composed of the following individuals with IDs from child 3 to child 16, from child 34 to child 37, from child 23 to child 38 and from child 27 to child 50, respectively It is worth noting that the first and second clusters of children can be distinguished by their HDAC4 methylation pattern, while the last two clusters are characterized by their heterogeneity.</p>
 </div>
 
