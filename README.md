@@ -60,14 +60,10 @@ This open-source repository is shared with the goal of promoting transparency an
   <p><strong>Figure 4.</strong> The heatmap displays clusters of children (rows) and variables (columns) based on their SHAP values. Clustering was only performed on the children used to generate the final classifier (RF) and the fifteen variables that contributed the most to the system based on their SHAP values. The legend shows that red and green represent children who were in IR and non-IR in pre-pubertal and pubertal states, respectively. Blue and red represent the non-IR and IR predictions of RF, respectively. The identification number of each child is displayed on the right-hand side. The visualization displays four clusters of children and variables. The initial cluster of variables comprises solely HDAC4 methylation, while the following two clusters consist of methylation of the main genes and the last cluster of variables comprises clinical variables such as BMI z-score and leptin/adiponectin ratio together with other methylation patterns. The first, second, third, and fourth clusters of children are composed of the following individuals with IDs from child 3 to child 16, from child 34 to child 37, from child 23 to child 38 and from child 27 to child 50, respectively It is worth noting that the first and second clusters of children can be distinguished by their HDAC4 methylation pattern, while the last two clusters are characterized by their heterogeneity.</p>
 </div>
 
-## Scripts
-
-All source code used to generate the results in the paper is organized in the `scripts` folder. This folder is further structured into subdirectories based on the specific tasks performed in the study. Each subdirectory corresponds to a key step in the pipeline described in the manuscript, allowing researchers to easily navigate and reproduce the analysis. 
-
-Each subdirectory contains well-documented scripts that correspond to specific steps in the analysis pipeline, making it easy to adapt the methodology to other datasets or contexts.
-
-
 ## Getting the code
+
+All source code used to generate the results in the paper is organized in the `scripts` folder. This folder is further structured into subdirectories based on the specific tasks performed in the study. Each subdirectory corresponds to a key step in the pipeline described in the manuscript, allowing researchers to easily navigate and reproduce the analysis. Each subdirectory contains well-documented scripts that correspond to specific steps in the analysis pipeline, making it easy to adapt the methodology to other datasets or contexts.
+
 
 You can download a copy of all the files in this repository by cloning the
 [git](https://git-scm.com/) repository:
