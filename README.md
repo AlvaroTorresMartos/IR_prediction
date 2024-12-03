@@ -19,10 +19,29 @@ Jesús Alcalá-Fdez
 > In the current paper, we propose a Machine Learning pipeline integrating multiomics data and eXplainable Artificial Intelligence (XAI) to predict insulin resistance during puberty using only pre-pubertal information. The methodology, including the combination of data layers, algorithms, and resampling techniques, is summarized in the following figure:
 
 ![](images/fig1.png)
-*Figure. Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.*
+*Figure 1. Summary of the experimental design. The longitudinal study consisted of pre-pubertal children who were followed into puberty three years later. The pre-pubertal information was used as input to generate the classifiers and the output was the pubertal IR status. The analysis plan utilizes genomic (Gen), epigenomic (Epi), and clinical (Clin) data from pre-pubertal children. The chosen data combination, algorithm, and resampling method are highlighted in red. Subsequently, we made pubertal predictions and analyzed the final classifier’s behavior using post-hoc explainer.*
+
+## Abstract 
+
+> Pediatric obesity can drastically heighten the risk of cardiometabolic alterations later in life, with insulin resistance standing as the cornerstone linking adiposity to the increased cardiovascular risk. Puberty has been pointed out as a critical stage after which obesity-associated insulin resistance is more difficult to revert. Timely prediction of insulin resistance in pediatric obesity is therefore vital for mitigating the risk of its associated comorbidities. The construction of effective and robust predictive systems for a complex health outcome like insulin resistance during the early stages of life demands the adoption of longitudinal designs for more causal inferences, and the integration of factors of varying nature involved in its onset. In this work, we propose an eXplainable Artificial Intelligence-based decision support pipeline for early diagnosis of insulin resistance in a longitudinal cohort of 90 children. For that, we leverage multi-omics (genomics and epigenomics) and clinical data from the pre-pubertal stage. Different data layers combinations, pre-processing techniques (missing values, feature selection, class imbalance, etc.), algorithms, training procedures were considered following good practices for Machine Learning. SHapley Additive exPlanations were provided for specialists to understand both the decision-making mechanisms of the system and the impact of the features on each automatic decision, an essential issue in high-risk areas such as this one where system decisions may affect people's lives. The system showed a relevant predictive ability (AUC and G-mean of 0.92). A deep exploration, both at the global and the local level, revealed promising biomarkers of insulin resistance in our population, highlighting classical markers, such as Body Mass Index z-score or leptin/adiponectin ratio, and novel ones such as methylation patterns of relevant genes, such as *HDAC4*, *PTPRN2*, *MATN2*, *RASGRF1* and *EBF1*. Our findings highlight the importance of integrating multi-omics data and following eXplainable Artificial Intelligence trends when building decision support systems. 
+
+## Results 
+
+![](images/fig2.png)
+*Figure 2. G-mean is shown in the 𝑦-axis and sensitivity and specificity are shown in the label for the employed classifiers across the combinations of data layers. According to the predictive metrics, Epi+Clin data fusion is the most accurate data combination in 3 of the 5 algorithms.*
+
+![](images/fig3.png)
+*Figure 3. The SHAP analysis was conducted for our final system to provide global explanations. The top 20 features, ranked by their contributions. Each point represents the contribution of a specific child and feature to the system. The color of the point indicates the value of the feature, with pink representing high values and blue representing low values.*
+
+![](images/fig4.png)
+*Figure 4. The heatmap displays clusters of children (rows) and variables (columns) based on their SHAP values. Clustering was only performed on the children used to generate the final classifier (RF) and the fifteen variables that contributed the most to the system based on their SHAP values. The legend shows that red and green represent children who were in IR and non-IR in pre-pubertal and pubertal states, respectively. Blue and red represent the non-IR and IR predictions of RF, respectively. The identification number of each child is displayed on the right-hand side. The visualization displays four clusters of children and variables. The initial cluster of variables comprises solely HDAC4 methylation, while the following two clusters consist of methylation of the main genes and the last cluster of variables comprises clinical variables such as BMI z-score and leptin/adiponectin ratio together with other methylation patterns. The first, second, third, and fourth clusters of children are composed of the following individuals with IDs from child 3 to child 16, from child 34 to child 37, from child 23 to child 38 and from child 27 to child 50, respectively It is worth noting that the first and second clusters of children can be distinguished by their HDAC4 methylation pattern, while the last two clusters are characterized by their heterogeneity.*
 
 
-All source code used to generate results in the paper are organized in folder listed. For a detailed description, please read the paper extensively.
+## Scripts
+
+All source code used to generate the results in the paper is organized in the `scripts` folder. This folder is further structured into subdirectories based on the specific tasks performed in the study. Each subdirectory corresponds to a key step in the pipeline described in the manuscript, allowing researchers to easily navigate and reproduce the analysis. 
+
+Each subdirectory contains well-documented scripts that correspond to specific steps in the analysis pipeline, making it easy to adapt the methodology to other datasets or contexts.
 
 
 ## Getting the code
@@ -44,4 +63,47 @@ A `R/Python` environment is required to execute the code. The required libraries
 
 All source code is made available under a BSD 3-clause license. You can freely use and modify the code, without warranty, so long as you provide attribution to the authors. See `LICENSE.md` for the full license text.
 
-The manuscript text is not open source. The authors reserve the rights to the article content, which is currently submitted for publication in the *Artificial Intelligence in Medicine*.
+The manuscript text is open source. 
+
+## License
+
+All source code is made available under a BSD 3-clause license. You can freely use, modify, and distribute the code, provided proper attribution is given to the authors. See `LICENSE.md` for the full license text. 
+
+The manuscript is open access, and both the main article and supplementary material can be freely accessed through the following links:
+
+- **Main Article**:
+  - **Journal Website**: [https://www.sciencedirect.com/science/article/pii/S0933365724002045](https://www.sciencedirect.com/science/article/pii/S0933365724002045)
+  - **University of Granada Institutional Repository (DIGIBUG)**: [https://digibug.ugr.es/handle/10481/93775](https://digibug.ugr.es/handle/10481/93775)
+
+- **Supplementary Material**:
+  - **UGR MultiOmics IR Prediction Website**: [https://sci2s.ugr.es/MultiOmics_IR_Pred](https://sci2s.ugr.es/MultiOmics_IR_Pred)
+
+This open-source repository is shared with the goal of promoting transparency and reproducibility in research, allowing researchers to reproduce the results and adapt the provided pipeline for their own datasets.
+
+## Citation
+
+If this work or the code provided in this repository has contributed to your research, we kindly ask that you cite our work in your publications. Proper citation helps acknowledge the efforts behind this project and supports further development.
+
+Please use the following citation:
+
+**Torres-Martos, Á., Anguita-Ruiz, A., Bustos-Aibar, M., Ramírez-Mena, A., Arteaga, M., Bueno, G., Leis, R., Aguilera, C. M., Alcalá, R., & Alcalá-Fdez, J. (2024). Multiomics and eXplainable artificial intelligence for decision support in insulin resistance early diagnosis: A pediatric population-based longitudinal study. Artificial intelligence in medicine, 156, 102962. [https://doi.org/10.1016/j.artmed.2024.102962](https://doi.org/10.1016/j.artmed.2024.102962)**
+
+Alternatively, you can use the following BibTeX entry for your reference manager:
+
+```bibtex
+@article{TorresMartos2024,
+  title = {Multiomics and eXplainable artificial intelligence for decision support in insulin resistance early diagnosis: A pediatric population-based longitudinal study},
+  volume = {156},
+  ISSN = {0933-3657},
+  url = {http://dx.doi.org/10.1016/j.artmed.2024.102962},
+  DOI = {10.1016/j.artmed.2024.102962},
+  journal = {Artificial Intelligence in Medicine},
+  publisher = {Elsevier BV},
+  author = {Torres-Martos, Álvaro and Anguita-Ruiz, Augusto and Bustos-Aibar, Mireia and Ramírez-Mena, Alberto and Arteaga, María and Bueno, Gloria and Leis, Rosaura and Aguilera, Concepción M. and Alcalá, Rafael and Alcalá-Fdez, Jesús},
+  year = {2024},
+  month = oct,
+  pages = {102962}
+}
+```
+
+We deeply appreciate your acknowledgment, as it helps highlight the importance of open science and supports the research community.
