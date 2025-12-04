@@ -70,7 +70,7 @@ You can download a copy of all the files in this repository by cloning the
 
     git clone https://github.com/AlvaroTorresMartos/IR_prediction
 
-or [download a zip archive](https://github.com/AlvaroTorresMartos/IR_prediction/archive/refs/heads/main.zip).
+or [download a zip archive](https://github.com/AlvaroTorresMartos/IR_prediction/archive/refs/heads/master.zip).
 
 
 ## Dependencies
